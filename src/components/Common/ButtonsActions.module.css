@@ -1,0 +1,15 @@
+.actions{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #252525;
+    padding: 0.5rem 0;
+}
+.actions button{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #666666;
+    font-size: 15px;
+}

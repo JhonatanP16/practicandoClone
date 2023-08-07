@@ -1,0 +1,13 @@
+footer{
+    width: 100%;
+    margin-top: 3rem;
+    padding: 2rem 1rem;
+    color: var(--title-kdrama);
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    background: var(--cor-bg-footer);
+}

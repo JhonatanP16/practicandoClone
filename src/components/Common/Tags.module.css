@@ -1,0 +1,35 @@
+.reload{
+    color: var(--cor-filtros);
+    font-size: 14px;
+    position: absolute;
+    right: 50px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.reload:hover{
+    
+    color: var(--cor-pink);
+}
+.tagItem{
+    color: var(--cor-filtros);
+    font-size: 14px;
+    border-radius: 10px;
+    border: 1px solid var(--cor-input);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 3px 5px;
+}
+.tagItem:hover{
+    color: var(--cor-pink);
+    border: 1px solid var(--cor-pink);
+}
+.tagItem:hover button{
+    color: var(--cor-pink);
+}
+
+.tagItem button{
+    font-size: 12px;
+}

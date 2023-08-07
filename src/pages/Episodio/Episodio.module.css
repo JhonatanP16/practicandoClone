@@ -1,0 +1,38 @@
+.container{
+    width: 100%;
+    min-height: 100vh;
+}
+.content{
+    width: 100%;
+    padding-top: 2rem;
+    background-color: #282832;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 4rem;
+}
+.containerB{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.contentB{
+    width: calc(100% - 4rem);
+    display: flex;
+    gap: 3.5rem;
+}
+.infoDrama{
+    width: 70%;
+}
+.topDrama{
+    width: 30%;
+}
+
+.contentChild{
+    width: calc(100% - 4rem);
+    display: flex;
+    flex-direction: column;
+}
+
+.contentChild iframe{
+    border: 0;
+}

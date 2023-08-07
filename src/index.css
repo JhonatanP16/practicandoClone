@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root{
+  --cor-bg:#fff;
+  --title-kdrama:#A2A2A2;
+  --cor-paginate:#BCBCBC;
+  --cor-pink:#ff6491;
+  --cor-blue:#737af2;
+  --cor-filter:#f8f8f8;
+  --cor-filter-text:black;
+  --cor-h2:#222222;
+  --cor-text:#F7E7F3;
+  --cor-nav: linear-gradient(90deg,var(--cor-pink),var(--cor-blue));
+  --cor-gradient: linear-gradient(90deg,var(--cor-pink),var(--cor-blue));
+  --icon-color-nav:#ddddff;
+  --color-user:#f6f7fb;
+  /* top */
+  --cor-bg-top: #fff;
+  /* footer */
+  --cor-bg-footer:#F8F8F8;
+  /* Episodios */
+  --cor-filtros: #666;
+  /* Search */
+  --cor-search-select: #fff;
+  /* Filtros input */
+  --cor-input: #F2F2F2;
+}
+.darkMode{
+  --cor-bg:#1a1a1a;
+  --cor-nav:black;
+  --cor-h2:#DDDDDD;
+  --cor-filter:#252525;
+  --cor-filter-text:#fff;
+  /* top */
+  --cor-bg-top: #2f2f2f;
+  /* footer */
+  --cor-bg-footer:#252525;
+  --cor-search-select:#252525;
+  --cor-filtros: #888;
+  --cor-input: #2F2F2F;
+}
+
+.app{
+  background: var(--cor-bg);
+  font-family: 'Roboto', sans-serif;
+  z-index: 10;
+}
+
+a{
+  text-decoration: none;
+}
+ul{
+  list-style: none;
+}
+input {
+  border: none;
+  outline: none;
+  background: var(--cor-bg);
+  padding: 0.2rem;
+}
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+/* Swipper */
+.swiper {
+  width: 100%!important;
+  height: 100%!important;
+  z-index: 10;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 420px;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.swiper-pagination{
+  text-align: right !important;
+  padding-right: 36px;
+  bottom: 30px !important;
+}
+.swiper-pagination-bullet{
+  width: 7px;
+  height: 7px;
+}
+.swiper-pagination-bullet.swiper-pagination-bullet-active{
+  background-color: #ff6491;
+  width: 15px;
+  height: 7px;
+  border-radius: 5px;
+}
+
+
+.swiper-button-prev::after,
+.swiper-button-next::after{
+  opacity: 0;
+  font-size: 20px;
+  color: white;
+}
+.swiper-button-next,
+.swiper-button-prev{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover{
+  background-color: #161d1c;  
+}
+
+.swiper:hover .swiper-button-prev::after,
+.swiper:hover .swiper-button-next::after{
+  opacity: 1;
+}

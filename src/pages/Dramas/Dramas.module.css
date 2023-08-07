@@ -1,0 +1,22 @@
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.content{
+    width: calc(100% - 10rem);
+}
+.results{
+    color: var(--cor-filtros);
+    font-size: 16px;
+    margin-bottom: 1rem;
+}
+.results span{
+    color: var(--cor-pink);
+}
+.notFound{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

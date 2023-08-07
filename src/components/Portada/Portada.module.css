@@ -1,0 +1,199 @@
+.container{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -65px;
+}
+
+.topBg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    display: block;
+    background-position: center;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.fondoUno{
+    display: block;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(100px) saturate(180%);
+}
+
+.fondo{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    height: 100%;
+    background: rgba(0,0,0,.5);
+    backdrop-filter: saturate(180%) blur(20px);
+}
+/*  */
+.content{
+    position: relative;
+    width: calc(100% - 4rem);
+    height: 100%;
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+}
+
+.content .img{
+    position: relative;
+    width: 250px;
+    height: 350px;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.content .img .ribon{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    color: white;
+    bottom: 0;
+    border-radius: 0 0 10px 10px;
+    font-size: 14px;
+    padding: 3px 0;
+}
+/* Detalles */
+.content .details{
+    display: flex;
+    flex-direction: column;
+    height: 340px;
+    flex: 2;
+}
+.content .details h1{
+    color: white;
+}
+.content .details p{
+    color: var(--title-kdrama);
+    margin-top: 1rem;
+}
+.content .details .actions{
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+}
+
+
+.content .details .actions .icons{
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+/* Actions */
+.actions .icons .trailer{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.actions .icons .favorite{
+    display: flex;
+    gap: 1rem;
+    margin-left: auto;
+    margin-right: 3rem;
+}
+
+.actions .icons .trailer{
+    font-size: 15px;
+    color: white;
+    border-radius: 15px;
+    padding: 10px 20px;
+    background: var(--cor-gradient);
+}
+
+.actions .icons .favorite button svg{
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--title-kdrama);
+}
+.actions .icons .favorite .heartFill{
+    color: var(--cor-pink);
+}
+.actions .icons .favorite .like{
+    position: relative;
+}
+
+.actions .icons .favorite .like span{
+    position: absolute;
+    top: -1rem;
+    color: var(--title-kdrama);
+}
+
+/* content card */
+.content .card{
+    flex: 1;
+    background: rgba(255,255,255,.1);
+    border-radius: 10px;
+    height: 340px;
+}
+.content .card .header{
+    width: 100%;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+}
+.content .card .header .rating{
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--title-kdrama);
+    margin-right: 1rem;
+}
+.content .card .header .calificacion{
+    display: flex;
+    flex-direction: column;
+}
+.content .card .header .calificacion p{
+    color: white;
+    font-size: 15px;
+}
+.content .card .header .calificacion svg{
+    font-size: 12px;
+    color: yellow;
+}
+.content .card .header .votos{
+    margin-left: auto;
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--title-kdrama);
+}
+
+/*  */
+
+.content .card .stars{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 1.5rem;
+    padding: 1rem 0;
+    border-top: 1px solid var(--title-kdrama);
+    border-bottom: 1px solid var(--title-kdrama);
+}
+
+.content .card .stars .starsMark svg{
+    font-size: 27px;
+    color: var(--title-kdrama);
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.content .card .stars .starsMark svg.yellow{
+    color: #FFCC00;
+}
+
+.content .card .stars span{
+    color: var(--title-kdrama);
+}

@@ -1,0 +1,47 @@
+.container{
+    width: 100%;
+    margin-top: 2rem;
+    
+}
+.stick{
+    position: fixed;
+    top: 60px;
+    z-index: 0;
+}
+.container h2{
+    color: var(--cor-h2);
+    font-size: 22px;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+.content .cardList{
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.2px solid #cccccc;
+}
+
+.content .cardList span{
+    color: #626262;
+}
+.content .cardList:nth-child(1) span{
+    color: var(--cor-pink);
+}
+.content .cardList:nth-child(2) span{
+    color: orange;
+}
+.content .cardList:nth-child(3) span{
+    color: yellow;
+}
+.content .cardList p{
+    color: var(--cor-h2);
+    font-size: 15px;
+}
+.content .cardList:hover p{
+    color: var(--cor-pink);
+}

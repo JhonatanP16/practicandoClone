@@ -1,0 +1,48 @@
+.content{
+    margin-top: 2rem;
+    border-radius:  15px;
+    width: 100%;
+    padding: 2rem 1.5rem;
+    background: var(--cor-bg-footer);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+.typeFilter{
+    display: flex;
+    gap: 1rem;
+}
+.itemFilter{
+    color: var(--cor-filtros);
+    font-weight: 600;
+    font-size: 15px;
+    width: 50px;
+    min-width: 50px;
+}
+.itemsFilter{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.itemsFilter button{
+    color: var(--cor-filtros);
+    font-size: 14px;
+    border-radius: 10px;
+}
+.itemsFilter .divInput{
+    display: flex;
+}
+.itemsFilter label{
+    color: var(--cor-filtros);
+    font-size: 14px;
+    cursor: pointer;
+    padding: 5px 7px;
+    border-radius: 10px;
+}
+.itemsFilter .divInput .input:checked ~ label{
+    background: var(--cor-input);
+    color: var(--cor-pink);
+    font-weight: 700;
+}

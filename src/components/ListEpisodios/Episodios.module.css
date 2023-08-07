@@ -1,0 +1,66 @@
+.container{
+    width: 100%;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+}
+.container h2{
+    color: var(--cor-h2);
+    font-size: 22px;
+}
+
+.container .header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+.container .header button{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--title-kdrama);
+}
+.container .header button svg{
+    font-size: 25px;
+    transform: rotate(180deg);
+    transition: 0.2ms;
+}
+.container .header .ascending{
+    transform: rotate(360deg);
+}
+.container .header button span{
+    font-size: 15px;
+}
+
+.container .header button:hover{
+    color: var(--cor-pink);
+}
+
+.numEpisodios{
+    width: 100%;
+    display: grid;
+    grid-gap: 16px;
+    grid-template-columns: repeat(6,1fr);
+}
+.numEpisodios .num{
+    padding: 10px 15px;
+    background: var(--cor-bg-footer);
+    text-align: center;
+    border-radius: 5px;
+    font-weight: 400;
+    font-size: 15px;
+    color: var(--title-kdrama);
+}
+
+.numEpisodios .num:hover{
+    color: var(--cor-pink);
+}
+/* Not found */
+.notFound{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    color: var(--title-kdrama);
+}

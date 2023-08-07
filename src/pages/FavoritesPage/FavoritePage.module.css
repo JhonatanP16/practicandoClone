@@ -1,0 +1,33 @@
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5rem;
+}
+.content{
+    width: calc(100% - 10rem);
+}
+.content h2{
+    color: var(--cor-h2);
+    font-size: 22px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.results{
+    color: var(--cor-filtros);
+    font-size: 16px;
+    margin-bottom: 1rem;
+}
+.results span a{
+    color: var(--cor-pink);
+}
+.results span{
+    color: var(--cor-pink);
+}
+.notFound{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

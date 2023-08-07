@@ -1,0 +1,116 @@
+.container{
+    width: 100%;
+}
+.container h2{
+    color: var(--cor-h2);
+    font-size: 22px;
+}
+.container .header{
+    display: flex;
+    justify-content: space-between;
+}
+.container .header svg{
+    color: var(--title-kdrama);
+    cursor: pointer;
+}
+
+.content{
+    margin-top: 1rem;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-gap: 10px;
+}
+/* content card  */
+
+.contentCard{
+    display: flex;
+    flex-direction: column;
+    width: 167px;
+    height: 300px;
+    margin-top: 1rem;
+}
+
+.contentCard:hover .textDrama span:nth-child(1){
+    color: var(--cor-pink);
+}
+
+.contentCard .cardLink{
+    display: block;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 290px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.contentCard .cardLink .play{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    opacity: 0;
+    transition: ease-in 0.5s;
+}
+.contentCard:hover .cardLink .play{
+    opacity: 1;
+}
+
+.contentCard .cardLink .play svg{
+    font-size: 50px;
+    color: white;
+}
+.contentCard .cardLink .play svg:hover{
+    color: var(--cor-pink);
+}
+
+.contentCard .cardLink .ribon{
+    position: absolute;
+    top: 0.5rem;
+    right: 0px;
+    background: var(--cor-gradient);
+}
+.contentCard .cardLink .ribon p{
+    color: white;
+    font-size: 11px;
+    padding: 3px 5px;
+}
+.contentCard .cardLink .calificacion{
+    position: absolute;
+    display: flex;
+    gap: 2px;
+    width: 100%;
+    bottom: 0;
+    justify-content: end;
+    padding: 5px 2px;
+    background: linear-gradient(transparent,rgba(0,0,0,.5));
+}
+
+.contentCard .cardLink .calificacion p{
+    color: white;
+    font-weight: 600;
+    font-size: 15px;
+}
+.contentCard .cardLink .calificacion svg{
+    color: yellow;
+}
+.textDrama{
+    margin-top: 1rem;
+    color: var(--title-kdrama);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.textDrama span{
+    text-align: center;
+    font-size: 13px;
+}
+

@@ -1,0 +1,22 @@
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: -3rem;
+}
+/* content */
+.content{
+    width: calc(100% - 4rem);
+    display: flex;
+    gap: 3.5rem;
+}
+
+/* InfoDrama */
+
+.infoDrama{
+    width: 70%;
+}
+.topDrama{
+    width: 30%;
+}

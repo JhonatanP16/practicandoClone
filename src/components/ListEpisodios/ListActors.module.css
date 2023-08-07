@@ -1,0 +1,72 @@
+.container{
+    max-width: 100%;
+    margin-bottom: 3.5rem;
+}
+.container h2{
+    color: var(--cor-h2);
+    font-size: 22px;
+}
+.container .actors{
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    overflow: hidden;
+}
+
+.container .actors .cardActor{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.container .actors .cardActor .imgActor{
+    display: block;
+    position: relative;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+}
+.imgActor .contentIcon{
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    left: 50%;
+    background: rgba(0,0,0,.5);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.imgActor:hover .contentIcon{
+    opacity: 1;
+}
+.cardActor:hover  .detailsActors span{
+    color: var(--cor-pink);
+}
+.imgActor .contentIcon svg{
+    color: #fff;
+    font-size: 25px;
+    rotate: 45deg;
+}
+
+.imgActor .contentIcon:hover{
+    background: var(--cor-pink);
+}
+
+.detailsActors{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.detailsActors span{
+    color: var(--cor-h2);
+    font-size: 13px;
+}

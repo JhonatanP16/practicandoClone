@@ -1,0 +1,126 @@
+.content{
+    display: flex;
+    background: var(--cor-bg);
+    border-radius: 25px;
+}
+.content.transparent{
+    background: transparent;
+}
+form{
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 25px;
+    position: relative;
+}
+
+form.formDetails{
+    background: rgba(255,255,255,.1);
+}
+
+form input{
+    background: transparent;
+}
+form input::placeholder{
+    color: var(--title-kdrama);
+}
+form input:focus{
+    color: var(--title-kdrama);
+}
+.selectionOption{
+    position: relative;
+    padding: 0 5px;
+}
+
+.selectionOption .options{
+    position: absolute;
+    top: 37px;
+    width: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    flex-direction: column;
+    z-index: 20;
+    background-color: var(--cor-search-select);
+}
+
+
+.selectionOption button{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 8px 5px;
+    color: var(--title-kdrama);
+}
+
+.selectionOption button:hover{
+    color: var(--cor-pink);
+}
+
+ form .btnSubmit{
+    display: flex;
+    gap: 0.5rem;
+    color: var(--title-kdrama);
+    align-items: center;
+    height: 100%;
+}
+ form .btnSubmit:hover,
+ form .selectionOption .select:hover{
+    color: var(--cor-pink);
+}
+
+
+/* RESULTS */
+.results{
+    position: absolute;
+    background: var(--cor-bg);
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 0.25rem 0rem;
+    top: 2.75rem;
+    left: -5rem;
+    width: 350px;
+    border-radius: 5px;
+    box-shadow: 1px 0px 38px -10px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 1px 0px 38px -10px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 0px 38px -10px rgba(0,0,0,0.75);
+}
+.cardResults{
+    display: flex;
+    gap: 1rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    border-bottom: 1px solid #cccccc;
+}
+.cardResults:last-child{
+    border-bottom: none;
+}
+.cardResults:hover {
+    border-left: 4px solid var(--cor-pink);
+}
+
+.cardResults .imgItem{
+    width: 40px;
+    height: 60px;
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+} 
+.cardResults .resultsDetails{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: var(--title-kdrama);
+}
+.cardResults .resultsDetails p:nth-child(2){
+    font-size: 13px;
+}
+
+/* CLEAN */
+.cleanSearch{
+    padding: 0 0.75rem;
+    color: var(--title-kdrama);
+}
