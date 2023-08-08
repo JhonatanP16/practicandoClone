@@ -28,6 +28,16 @@
     border-radius: 10px;
 }
 
+.contentCard .cardLink .iconoDown{
+    position: absolute;
+    top: -1.5rem;
+    right: 0;
+    color: var(--cor-pink);
+    opacity: 0;
+}
+.contentCard .cardLink:hover .iconoDown{
+    opacity: 1;
+}
 .contentCard .cardLink .play{
     position: absolute;
     width: 100%;

@@ -1,8 +1,10 @@
 import React from 'react'
 import classes from './ListDramasCom.module.css'
-import { Link } from 'react-router-dom'
-import { BsPlayCircle, BsStarFill } from 'react-icons/bs'
+import { Link, useLocation } from 'react-router-dom'
+import { BsDownload, BsPlayCircle, BsStarFill } from 'react-icons/bs'
+import { dowloadFile } from '../../helpers/Title'
 const ListDramasCom = ({dramas}) => {
+  const {pathname} = useLocation();
 
   return (
     <div className={classes.content}>
@@ -16,6 +18,11 @@ const ListDramasCom = ({dramas}) => {
             to={`/detalle/${(drama.titleUs).replace(/\s+/g, '-')}`}
             state={drama}
             >
+              {
+                pathname === '/favorites' && (
+                  <BsDownload className={classes.iconoDown} onClick={(e) => dowloadFile(e,drama.imgUrl)}/>
+                )
+              }
             <div className={classes.play}>
                 <BsPlayCircle/>
             </div>

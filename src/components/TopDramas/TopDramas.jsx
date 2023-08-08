@@ -31,7 +31,7 @@ const TopDramas = () => {
       <div className={classes.content}>
         {
             dramasTop.map((drama,index) => (
-                <div className={classes.cardList}>
+                <div className={classes.cardList} key={index}>
                     <span>{index+1}</span>
                     <p>{drama}</p>
                 </div>
