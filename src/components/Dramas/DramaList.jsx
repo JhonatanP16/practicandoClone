@@ -20,7 +20,11 @@ const DramaList = ({dramas,nameSection,categorias,changeCategoria,categoriaSelec
         setTotal(paginas)
     }
     
-    
+    useEffect(() =>{
+      if(swiper){
+        getTotal(swiper);
+      }
+    },[slidesToShow])
     useEffect(() => {
       const updatedSlidesShow = () => {
         if(window.innerWidth >= 1280){

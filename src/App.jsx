@@ -10,28 +10,35 @@ import Dramas from "./pages/Dramas/Dramas"
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import FavoritesPage from "./pages/FavoritesPage/FavoritesPage"
+import Sidebar from "./components/Common/Sidebar"
 function App() {
   const {dark} = useSelector((state) => state.theme);
+  const {menuOpen} = useSelector((state) => state.theme);
   return (
-      <div className={`app ${dark ? 'darkMode' : ''}`}>
+    <div className={`app ${dark ? 'darkMode' : ''}`}>
+      {
+        menuOpen && (
+          <Sidebar/>
+        )
+      }
       <Top/>
-    <ToastContainer
-      limit={3}
-      position="top-right"
-      autoClose={1000}
-      pauseOnHover={false}
-      theme="colored"
-    />
+      <ToastContainer
+        limit={3}
+        position="top-right"
+        autoClose={1000}
+        pauseOnHover={false}
+        theme="colored"
+      />
     <BrowserRouter>
-    <Navbar/>
-      <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="/detalle/:name" element={<Details/>}/>
-        <Route path="/episodio/:name" element={<Episodio/>}/>
-        <Route path="/dramas" element={<Dramas/>}/>
-        <Route path="/favorites" element={<FavoritesPage/>}/>
-      </Routes>
-    <Footer/>
+      <Navbar/>
+        <Routes>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/detalle/:name" element={<Details/>}/>
+          <Route path="/episodio/:name" element={<Episodio/>}/>
+          <Route path="/dramas" element={<Dramas/>}/>
+          <Route path="/favorites" element={<FavoritesPage/>}/>
+        </Routes>
+      <Footer/>
     </BrowserRouter>
     </div>
   )

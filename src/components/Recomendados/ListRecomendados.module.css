@@ -139,4 +139,7 @@
         width: 120px;
         height: 240px;
     }
+    .header h2{
+        font-size: 18px;
+    }
 }

@@ -5,12 +5,15 @@ import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom'
 import { BiAlarm, BiGridAlt, BiHeart, BiUser } from "react-icons/bi";
 import { BsChevronLeft, BsGridFill, BsHammer } from "react-icons/bs";
 import Search from './Common/Search';
+import { menuOpened } from '../store/themeSlice';
+import { useDispatch } from 'react-redux';
 const Navbar = () => {
     const classIsActive = ({isActive}) => isActive ? classes.linkActivo : ''; 
     const state = useLocation();
     const str = state.pathname.split('/');
     const navigate = useNavigate();
     const [navTop,setNavTop] = useState(false);
+    const dispatch = useDispatch();
     useEffect(() => {
         window.scrollTo(0,0)
     },[state]);
@@ -30,7 +33,7 @@ const Navbar = () => {
   return (
     <nav className={`${classes.nav} ${(str[1] === 'detalle' && !navTop) ? classes.navDetails : '' } ${navTop ? classes.navFixed : ''}`}>
         <div className={classes.container}>
-            <button className={classes.menu}>
+            <button className={classes.menu} onClick={()=>dispatch(menuOpened())}>
                 <BsGridFill/>
             </button>
             {

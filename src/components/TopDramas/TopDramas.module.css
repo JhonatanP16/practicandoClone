@@ -46,7 +46,11 @@
     color: var(--cor-pink);
 }
 @media screen and (max-width: 1024px) {
+    .container h2{
+        font-size: 18px;
+    }
     .stick{
+        top: 0;
         position: relative;
     }
 }
