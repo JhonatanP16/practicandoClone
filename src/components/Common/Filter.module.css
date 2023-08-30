@@ -46,3 +46,15 @@
     color: var(--cor-pink);
     font-weight: 700;
 }
+@media screen and (max-width: 450px) {
+    .itemFilter{
+        font-size: 13px;
+    }
+    .itemsFilter label{
+        font-size: 12px;
+        padding: 3px 5px;
+    }
+    .itemsFilter{
+        gap: 8px;
+    }
+}

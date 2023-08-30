@@ -33,3 +33,10 @@
 .tagItem button{
     font-size: 12px;
 }
+
+@media screen and (max-width: 450px) {
+    .tagItem{
+        font-size: 12px;
+        padding: 3px 5px;
+    }
+}

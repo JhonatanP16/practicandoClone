@@ -7,7 +7,14 @@ footer{
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
     flex-direction: column;
     gap: 0.5rem;
     background: var(--cor-bg-footer);
+}
+
+@media screen and (max-width: 450px){
+    footer{
+        font-size: 13px;
+    }
 }

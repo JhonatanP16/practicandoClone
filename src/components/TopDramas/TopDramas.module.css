@@ -45,3 +45,8 @@
 .content .cardList:hover p{
     color: var(--cor-pink);
 }
+@media screen and (max-width: 1024px) {
+    .stick{
+        position: relative;
+    }
+}

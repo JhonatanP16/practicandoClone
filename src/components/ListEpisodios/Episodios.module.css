@@ -64,3 +64,8 @@
     justify-content: center;
     color: var(--title-kdrama);
 }
+@media screen and (max-width: 576px) {
+    .notFound img{
+        width: 300px;
+    }
+}

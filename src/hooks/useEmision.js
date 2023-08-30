@@ -5,8 +5,6 @@ const useEmision = () => {
   const [categoriaSelecionada,setCategoriaSeleccionada] = useState('lunes');
   const categorias = Object.keys(dramas.emision);
   
- 
-  
   const changeCategoria = useCallback((categoria) => {
     setCategoriaSeleccionada(categoria);
   },[])

@@ -5,11 +5,13 @@
     justify-content: center;
     margin-top: 3rem;
 }
+
 /* Pagination */
 .rc-pagination {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
   }
   .rc-pagination-next button{
     color: #fff;
@@ -116,4 +118,29 @@
     background-color: #fff;
     color: var(--cor-pink);
     border-color: 1px solid var(--cor-pink);
+  }
+  @media screen and (max-width: 450px) {
+    .rc-pagination-jump-next, 
+  .rc-pagination-jump-prev, 
+  .rc-pagination-next, 
+  .rc-pagination-prev {
+    min-width: 25px;
+    height: 25px;
+    padding: 4px 6px;
+    font-size: 11px;
+  }
+    .rc-pagination-item a, 
+  .rc-pagination-item button, 
+  .rc-pagination-prev a, 
+  .rc-pagination-prev button, 
+  .rc-pagination-next a, 
+  .rc-pagination-next button,
+  .rc-pagination-total-text a, 
+  .rc-pagination-total-text button {
+    padding: 4px 6px;
+    height: auto;
+    min-width: 25px;
+    min-height: 25px;
+    font-size: 11px;
+  }
   }

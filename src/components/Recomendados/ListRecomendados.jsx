@@ -50,8 +50,8 @@ const ListRecomendados = () => {
                     </div>
                     </Link>
                     <div className={classes.textDrama}>
-                    <span>{drama.title}</span>
-                    <span>{drama.titleUs}</span>
+                      <span>{drama.title}</span>
+                      <span>{drama.titleUs}</span>
                     </div>
               </div>
             ))

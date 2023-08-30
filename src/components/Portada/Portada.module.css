@@ -42,6 +42,7 @@
     width: calc(100% - 4rem);
     height: 100%;
     display: flex;
+    flex-wrap: wrap;
     gap: 1.5rem;
     margin-top: 5rem;
     margin-bottom: 2rem;
@@ -196,4 +197,64 @@
 
 .content .card .stars span{
     color: var(--title-kdrama);
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .content{
+        width: calc(100% - 2rem);
+    }
+    .content .img{
+        width: 200px;
+        height: 350px;
+    }
+    .content .details h1{
+        font-size: 25px;
+    }
+    .details .trailer{
+        padding: 4px 8px;
+    }
+}
+@media screen and (max-width: 576px) {
+    .content{
+        width: calc(100% - 1rem);
+        gap: 12px;
+    }
+   .content .details{
+        height: 300px;
+   }
+   .content .img{
+        width: 180px;
+        height: 300px;
+    }
+    .actions .icons .trailer{
+        font-size: 14px;
+        padding: 7px 15px;
+    }
+    .actions .icons .favorite button svg{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 450px) {
+   .content .details{
+        height: 240px;
+   }
+   .content .details h1{
+        font-size: 20px;
+   }
+   .content .details p{
+    font-size: 14px;
+   }
+   .content .img{
+        width: 150px;
+        height: 240px;
+    }
+    .actions .icons .trailer{
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+    .actions .icons .favorite button svg{
+        font-size: 15px;
+    }
 }

@@ -3,7 +3,7 @@ import classes from './Navbar.module.css'
 import Logo from '../assets/logo.png'
 import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom'
 import { BiAlarm, BiGridAlt, BiHeart, BiUser } from "react-icons/bi";
-import { BsChevronLeft } from "react-icons/bs";
+import { BsChevronLeft, BsGridFill, BsHammer } from "react-icons/bs";
 import Search from './Common/Search';
 const Navbar = () => {
     const classIsActive = ({isActive}) => isActive ? classes.linkActivo : ''; 
@@ -30,6 +30,9 @@ const Navbar = () => {
   return (
     <nav className={`${classes.nav} ${(str[1] === 'detalle' && !navTop) ? classes.navDetails : '' } ${navTop ? classes.navFixed : ''}`}>
         <div className={classes.container}>
+            <button className={classes.menu}>
+                <BsGridFill/>
+            </button>
             {
                 (str[1] == 'detalle') ? (
                     <BsChevronLeft className={classes.back} onClick={() => navigate(-1)}/>

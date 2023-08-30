@@ -7,11 +7,11 @@ import "./DramaList.css"
 import { Link } from 'react-router-dom';
 import { titleConvert } from '../../helpers/Title';
 
-
 const DramaList = ({dramas,nameSection,categorias,changeCategoria,categoriaSelecionada}) => {
   const [swiper,setSwiper] = useState(null);
   const [page,setPage] = useState(1);
   const [total,setTotal] = useState(0);
+  const [slidesToShow,setSlidesToShow] = useState(6);
   
     const getTotal = (swiper) => {
         const slidesPorPagina = swiper.params.slidesPerView;
@@ -19,7 +19,26 @@ const DramaList = ({dramas,nameSection,categorias,changeCategoria,categoriaSelec
         const paginas = Math.ceil(totalSlides / slidesPorPagina);
         setTotal(paginas)
     }
-
+    
+    
+    useEffect(() => {
+      const updatedSlidesShow = () => {
+        if(window.innerWidth >= 1280){
+          setSlidesToShow(6);
+        }else if(window.innerWidth >= 1024){
+          setSlidesToShow(5);
+        }else if(window.innerWidth >= 768){
+          setSlidesToShow(4);
+        }else if(window.innerWidth >= 640){
+          setSlidesToShow(3);
+        }else if(window.innerWidth >= 0){
+          setSlidesToShow(3);
+        }
+      }
+      updatedSlidesShow();
+      window.addEventListener('resize',updatedSlidesShow);
+      return () => window.removeEventListener('resize',updatedSlidesShow);
+    },[])
 
   const handleNext = () =>{
     swiper.slideNext();
@@ -60,11 +79,13 @@ const DramaList = ({dramas,nameSection,categorias,changeCategoria,categoriaSelec
           </div>
         )
       }
-      <div className='buttons'>
-        <button onClick={handlePrev} disabled={page==1}><BsChevronLeft className='arrow arrow-prev'/></button>
-        <span>{page}/{total}</span>
-        <button onClick={handleNext} disabled={page==total}><BsChevronRight className='arrow arrow-next'/></button>
-      </div>
+     
+        <div className='buttons'>
+          <button onClick={handlePrev} disabled={page==1}><BsChevronLeft className='arrow arrow-prev'/></button>
+          <span>{page}/{total}</span>
+          <button onClick={handleNext} disabled={page==total}><BsChevronRight className='arrow arrow-next'/></button>
+        </div>
+
       </div>
         
        <Swiper
@@ -73,9 +94,9 @@ const DramaList = ({dramas,nameSection,categorias,changeCategoria,categoriaSelec
        }}
        onSwiper={(swiper) => [setSwiper(swiper),getTotal(swiper)]}
        onSlideChange={(swiper) => setPage(Math.ceil(swiper.activeIndex / swiper.params.slidesPerGroup)+1)}
-       spaceBetween={15}
-       slidesPerView={6}
-       slidesPerGroup={6}
+       spaceBetween={window.innerWidth <= 400 ? 8 : 15}
+       slidesPerView={slidesToShow}
+       slidesPerGroup={slidesToShow}
        navigation={true}
        modules={[Navigation]}
        >

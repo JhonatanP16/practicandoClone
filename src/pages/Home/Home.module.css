@@ -8,3 +8,9 @@
 .container{
     width: calc(100% - 4rem);
 }
+
+@media screen and (max-width: 450px) {
+    .container{
+        width: calc(100% - 1rem);
+    }
+}

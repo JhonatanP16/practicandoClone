@@ -20,3 +20,26 @@
 .topDrama{
     width: 30%;
 }
+@media screen and (max-width: 1024px) {
+    .content{
+        flex-direction: column;
+    }
+    .infoDrama{
+        width: 100%;
+    }
+    .topDrama{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+}
+@media screen and (max-width: 576px) {
+    .content{
+        width: calc(100% - 1rem);
+        display: flex;
+        gap: 3.5rem;
+    }
+    
+}

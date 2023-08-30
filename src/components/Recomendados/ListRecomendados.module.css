@@ -112,5 +112,31 @@
 .textDrama span{
     text-align: center;
     font-size: 13px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
+@media screen and (max-width: 900px) {
+    .content{
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+@media screen and (max-width: 768px) {
+    .content{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+@media screen and (max-width: 576px) {
+    .contentCard{
+        width: 150px;
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .contentCard{
+        width: 120px;
+        height: 240px;
+    }
+}

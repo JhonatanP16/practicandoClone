@@ -13,8 +13,8 @@ import FavoritesPage from "./pages/FavoritesPage/FavoritesPage"
 function App() {
   const {dark} = useSelector((state) => state.theme);
   return (
-    <div className={`app ${dark ? 'darkMode' : ''}`}>
-    <Top/>
+      <div className={`app ${dark ? 'darkMode' : ''}`}>
+      <Top/>
     <ToastContainer
       limit={3}
       position="top-right"
