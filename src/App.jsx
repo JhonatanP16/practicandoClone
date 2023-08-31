@@ -16,11 +16,7 @@ function App() {
   const {menuOpen} = useSelector((state) => state.theme);
   return (
     <div className={`app ${dark ? 'darkMode' : ''}`}>
-      {
-        menuOpen && (
-          <Sidebar/>
-        )
-      }
+    
       <Top/>
       <ToastContainer
         limit={3}
@@ -30,6 +26,11 @@ function App() {
         theme="colored"
       />
     <BrowserRouter>
+    {
+        menuOpen && (
+          <Sidebar/>
+        )
+      }
       <Navbar/>
         <Routes>
           <Route path="/" element={<Home/>}/>

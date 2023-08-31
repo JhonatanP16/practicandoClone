@@ -14,12 +14,12 @@
     width: 100%;
     padding: 0;
 }
-.sidebar form input{
+/* .sidebar form input{
     width: 100%;
     border: 1px solid #ccc;
     border-radius: 10px;
     padding: 5px 10px;
-}
+} */
 .sidebar h2{
     color: var(--cor-h2);
 }

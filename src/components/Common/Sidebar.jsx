@@ -2,6 +2,7 @@ import React from 'react'
 import classes from './Sidebar.module.css'
 import { useDispatch } from 'react-redux'
 import { menuClosed } from '../../store/themeSlice';
+import { NavLink } from 'react-router-dom';
 
 const Sidebar = () => {
     const dispatch = useDispatch();
@@ -16,7 +17,7 @@ const Sidebar = () => {
         <ul className={classes.ul}>
             {
                 links.map((link,index) =>(
-                    <li key={index}><a href="/dramas">{link}</a></li>
+                    <li key={index}><NavLink to='/dramas'>{link}</NavLink></li>
                 ))
             }
         </ul>
