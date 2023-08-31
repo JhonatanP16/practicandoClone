@@ -31,6 +31,14 @@
         width: calc(100% - 3rem);
     }
 }
+@media screen and (max-width: 576px) {
+    .notFound{
+        height: 300px;
+    }
+    .notFound img{
+        width: 280px;
+    }
+}
 @media screen and (max-width: 450px) {
     .content{
         width: calc(100% - 1rem);

@@ -75,7 +75,7 @@ button {
   border: none;
 }
 button:focus{
-  outline: none;
+  outline: 0;
 }
 /* Swipper */
 .swiper {
