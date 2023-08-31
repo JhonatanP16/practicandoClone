@@ -11,9 +11,11 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import FavoritesPage from "./pages/FavoritesPage/FavoritesPage"
 import Sidebar from "./components/Common/Sidebar"
+import SearchRes from "./components/Common/SearchRes"
 function App() {
   const {dark} = useSelector((state) => state.theme);
   const {menuOpen} = useSelector((state) => state.theme);
+  const {searchOpen} = useSelector((state) => state.theme)
   return (
     <div className={`app ${dark ? 'darkMode' : ''}`}>
     
@@ -26,9 +28,14 @@ function App() {
         theme="colored"
       />
     <BrowserRouter>
-    {
+      {
         menuOpen && (
           <Sidebar/>
+        )
+      }
+      {
+        searchOpen && (
+          <SearchRes/>
         )
       }
       <Navbar/>

@@ -68,8 +68,17 @@
     .notFound img{
         width: 300px;
     }
+    .numEpisodios{
+        grid-template-columns: repeat(5,1fr);
+    }
+    .numEpisodios .num{
+        font-size: 12px;
+    }
 }
 @media screen and (max-width: 450px) {
+    .numEpisodios{
+        grid-template-columns: repeat(4,1fr);
+    }
    .header h2{
     font-size: 18px;
    }

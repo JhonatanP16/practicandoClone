@@ -36,3 +36,38 @@
 .contentChild iframe{
     border: 0;
 }
+.frame{
+    width: 70%;
+}
+@media screen and (max-width: 1024px) {
+    .frame{
+        width: 100%;
+    }
+    .contentB{
+        flex-direction: column;
+    }
+    .infoDrama{
+        width: 100%;
+    }
+    .topDrama{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+}
+@media screen and (max-width: 576px) {
+    .contentB{
+        width: calc(100% - 2rem);
+    }
+  
+    .contentChild{
+        width: calc(100% - 1rem);
+    }
+}
+@media screen and (max-width: 450px) {
+    .contentB{
+        width: calc(100% - 1rem);
+    }
+ }

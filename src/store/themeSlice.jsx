@@ -3,6 +3,7 @@ import { createSlice } from "@reduxjs/toolkit"
 const initialState ={
     dark:  false,
     menuOpen: false,
+    searchOpen: false,
 }
 
 export const themeSlice = createSlice({
@@ -17,11 +18,17 @@ export const themeSlice = createSlice({
         },
         menuClosed:(state) =>{
             state.menuOpen = false;
-        }
+        },
+        searchOpened:(state) =>{
+            state.searchOpen = true;
+        },
+        searchClosed:(state) =>{
+            state.searchOpen = false;
+        },
     }
 })
 
-export const {changeTheme,menuOpened,menuClosed} = themeSlice.actions;
+export const {changeTheme,menuOpened,menuClosed,searchOpened,searchClosed} = themeSlice.actions;
 
 
 export default themeSlice.reducer;

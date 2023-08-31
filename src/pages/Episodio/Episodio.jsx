@@ -12,7 +12,7 @@ const Episodio = () => {
     <div className={classes.container}>
       <div className={classes.content}>
         <div className={classes.contentChild}>
-          <div style={{width:'70%'}}>
+          <div className={classes.frame}>
             <iframe width="100%" height="450" src={state.link}  allow="autoplay" allowFullScreen></iframe>
             <ButtonsActions/>
           </div>

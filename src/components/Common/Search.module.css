@@ -101,7 +101,6 @@ form input:focus{
 .cardResults:hover {
     border-left: 4px solid var(--cor-pink);
 }
-
 .cardResults .imgItem{
     width: 40px;
     height: 60px;
@@ -123,4 +122,18 @@ form input:focus{
 .cleanSearch{
     padding: 0 0.75rem;
     color: var(--title-kdrama);
+}
+
+
+@media screen and (max-width: 450px) {
+    .content .selectionOption{
+        display: none;
+    }
+    .results{
+        width: 300px;
+        left: 0;
+    }
+    .resultsDetails{
+        font-size: 12px;
+    }
 }

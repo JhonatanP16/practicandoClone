@@ -18,9 +18,6 @@ const Sidebar = () => {
     <>
     <div className={classes.sidebar}>
         <h2>Pandrama</h2>
-        <form>
-            <input type="text" placeholder='Search Drama'/>
-        </form>
         <ul className={classes.ul}>
             {
                 enlaces.map((link,index) =>(

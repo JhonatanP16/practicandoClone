@@ -3,6 +3,8 @@ import classes from './Search.module.css'
 import { FaAngleDown, FaSearch } from 'react-icons/fa'
 import { Link, useLocation } from 'react-router-dom'
 import { listKdramas } from '../../data/listKdrmas'
+import { useDispatch } from 'react-redux'
+import { searchClosed } from '../../store/themeSlice'
 
 const Search = ({navTop}) => {
     const state = useLocation();
@@ -10,6 +12,7 @@ const Search = ({navTop}) => {
     const refSelect = useRef(null);
     const [option,setOption] = useState('Videos');
     const [showSelect,setShowSelect] = useState(false);
+    const dispatch = useDispatch();
     const handleShow = () => {
         setShowSelect((prev) => !prev);
     }
@@ -46,6 +49,7 @@ const Search = ({navTop}) => {
         setSearch('')
     }
     const handleClean = () => {
+        dispatch(searchClosed())
         setSearch('')
     }
   return (
