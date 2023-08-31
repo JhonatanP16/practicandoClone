@@ -18,7 +18,7 @@
     margin-top: 1rem;
     min-height: 100vh;
     display: grid;
-    grid-template-columns: repeat(5,1fr);
+    grid-template-columns: repeat(5,minmax(9%, 1fr));
     grid-gap: 10px;
 }
 /* content card  */
@@ -26,7 +26,7 @@
 .contentCard{
     display: flex;
     flex-direction: column;
-    width: 167px;
+    width: 100%;
     height: 300px;
     margin-top: 1rem;
 }
@@ -41,7 +41,7 @@
     background-size: cover;
     background-position: center;
     width: 100%;
-    height: 290px;
+    height: calc(100% - 40px);
     object-fit: cover;
     border-radius: 10px;
 }
@@ -119,25 +119,26 @@
 
 @media screen and (max-width: 900px) {
     .content{
-        grid-template-columns: repeat(4,1fr);
+        grid-template-columns: repeat(4,minmax(9%, 1fr));
     }
 }
 @media screen and (max-width: 768px) {
     .content{
-        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(4,minmax(9%, 1fr));
     }
 }
 @media screen and (max-width: 576px) {
     .contentCard{
-        width: 150px;
-        height: 300px;
+        height: 280px;
     }
 }
 
 @media screen and (max-width: 450px) {
+    .content{
+        grid-template-columns: repeat(3,minmax(9%, 1fr));
+    }
     .contentCard{
-        width: 120px;
-        height: 240px;
+        height: 250px;
     }
     .header h2{
         font-size: 18px;
