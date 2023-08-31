@@ -25,9 +25,35 @@
     color: var(--cor-pink);
 }
 .notFound{
-    min-height: 100vh;
+    height: 100vh;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+@media screen and (max-width: 768px) {
+    .content{
+        width: calc(100% - 4rem);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .notFound{
+        height: 300px;
+    }
+    .notFound img{
+        width: 280px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .content{
+        width: calc(100% - 1rem);
+    }
+    .content h2{
+        font-size: 15px;
+    }
+    .content .results{
+        font-size: 12px;
+    }
 }

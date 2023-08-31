@@ -1,12 +1,19 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import classes from './Sidebar.module.css'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { menuClosed } from '../../store/themeSlice';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 
 const Sidebar = () => {
     const dispatch = useDispatch();
-    const links = ['Dramas','Peliculas','Actores', 'Favoritos', 'Histotial','Top Dramas']
+    const enlaces = [
+        { link: 'Dramas', path: '/dramas' },
+        { link: 'Peliculas', path: '/dramas' },
+        { link: 'Actores', path: '/dramas' },
+        { link: 'Favoritos', path: '/favorites' },
+        { link: 'Historial', path: '/dramas' },
+        { link: 'Top dramas', path: '/dramas' },
+      ];
   return (
     <>
     <div className={classes.sidebar}>
@@ -16,8 +23,8 @@ const Sidebar = () => {
         </form>
         <ul className={classes.ul}>
             {
-                links.map((link,index) =>(
-                    <li key={index}><NavLink to='/dramas'>{link}</NavLink></li>
+                enlaces.map((link,index) =>(
+                    <li key={index} onClick={() => dispatch(menuClosed())}><NavLink to={link.path}>{link.link}</NavLink></li>
                 ))
             }
         </ul>
