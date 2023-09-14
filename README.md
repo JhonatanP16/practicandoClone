@@ -3,9 +3,14 @@
 
 Movies App
 
-## Instalación
-npm install
+## Como usar
 
-## Ejecutar
+Ver aqui: https://clonepan.onrender.com
+
+```
+git clone https://github.com/JhonatanP16/dashboard.git
+cd dashboard
+npm  install
 npm run dev
+```
 
